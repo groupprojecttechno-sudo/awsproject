@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shirsha Ghosh</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- Header / Sidebar -->
+  <header id="header">
+    <div class="sidebar">
+      <nav class="primary-nav navbar-expand-md">
+        <div class="site-title text-center text-light py-5">
+          <a href="#" class="navbar-brand font-staat font-size-40">SG</a>
+        </div>
+        <div class="d-flex flex-column">
+          <a href="#home" class="nav-item nav-link text-white-70 active">Home</a>
+          <a href="#about_me" class="nav-item nav-link text-white-70">About</a>
+          <a href="#awards" class="nav-item nav-link text-white-70">Achievements</a>
+          <a href="#portfolio" class="nav-item nav-link text-white-70">Portfolio</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <button class="toggle-button"><span class="fas fa-bars fa-2x"></span></button>
+
+  <!-- Main -->
+  <main id="site-main">
+    <!-- Banner -->
+    <section class="site-banner" id="home">
+      <div class="banner-area text-center">
+        <div class="author">
+          <div class="author-img"></div>
+          <h1 class="text-dark font-staat font-size-40 text-uppercase py-3">Shirsha Ghosh</h1>
+          <h5 class="text-dark font-ram font-size-27">I'm a <span id="typed"></span></h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about_me">
+      <div class="me py-3">
+        <h5 class="text-uppercase text-muted">INFORMATION</h5>
+        <h1 class="text-uppercase font-staat font-size-34">About Me</h1>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-sm-5">
+          <img src="./assets/banner.png" class="img-fluid" alt="profile image"/>
+        </div>
+        <div class="col-sm-7">
+          <h6 class="text-uppercase text-muted">About Me</h6>
+          <h5 class="font-ram font-size-20 py-2">
+            I'm Shirsha Ghosh, Age 21 — <span id="typed_2"></span>
+          </h5>
+          <p class="font-ram text-black-50 py-2">
+            I create modern and smooth web experiences. Skilled in frontend
+            technologies and passionate about building clean UI with great UX.
+            Focused, detail-oriented and always learning something new.
+          </p>
+          <div class="py-3">
+            <p><b>Website:</b> <span class="text-black-50">shirshaghosh.com</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="index.js"></script>
+</body>
+</html>
