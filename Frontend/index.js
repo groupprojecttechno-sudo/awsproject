@@ -1,32 +1,67 @@
-$(document).ready(function () {
-    const $navbar = $('.sidebar');
-    const $toggle = $('.toggle-button');
-  
-    // Toggle sidebar on mobile
-    $toggle.click(function () {
-      $navbar.toggleClass("toggle-left");
+$(document).ready(function (e) {
+    $win = $(window);
+    $navbar = $('#header');
+    $toggle = $('.toggle-button');
+    var width = $navbar.width();
+    toggle_onclick($win, $navbar, width);
+
+    // resize event
+    $win.resize(function () {
+        toggle_onclick($win, $navbar, width);
     });
-  
-    // Highlight active nav link
-    $('a.nav-link').click(function(){
-      $('a.nav-link').removeClass('active');
-      $(this).addClass('active');
+
+    $toggle.click(function (e) {
+        $navbar.toggleClass("toggle-left");
+    })
+
+});
+
+function toggle_onclick($win, $navbar, width) {
+    if ($win.width() <= 768) {
+        $navbar.css({ left: `-${width}px` });
+    } else {
+        $navbar.css({ left: '0px' });
+    }
+}
+
+var typed = new Typed('#typed', {
+    strings: [
+        'Software Engineer',
+        'Cloud Architect',
+        
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});
+
+var typed_2 = new Typed('#typed_2', {
+    strings: [
+        'Software Engineer',
+        'Cloud Architect',
+        
+    ],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-  });
-  
-  // Typed.js animations
-  setTimeout(() => {
-    new Typed('#typed', {
-      strings: ['Frontend Developer', 'UI/UX Enthusiast', 'Web Designer'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true
-    });
-  
-    new Typed('#typed_2', {
-      strings: ['Frontend Developer', 'UI/UX Enthusiast', 'Web Designer'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true
-    });
-  }, 300);
+});
+
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+    let response = await fetch(
+        "https://wwjcx7tyxrbjmbkf3vc3teo3mu0qrvhq.lambda-url.ca-central-1.on.aws/"
+    );
+    let data = await response.json();
+    counter.innerHTML = `👀 Views: ${data}`;
+}
+updateCounter();
