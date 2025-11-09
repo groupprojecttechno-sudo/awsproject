@@ -28,7 +28,7 @@ var typed = new Typed('#typed', {
     strings: [
         'BCA Student',
         'Hard Working Person',
-        
+       
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -39,7 +39,7 @@ var typed_2 = new Typed('#typed_2', {
     strings: [
         'BCA Student',
         'Hard Working Person',
-        
+       
     ],
     typeSpeed: 50,
     backSpeed: 50,
