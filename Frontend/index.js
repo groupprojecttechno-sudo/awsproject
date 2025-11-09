@@ -12,8 +12,7 @@ $(document).ready(function (e) {
 
     $toggle.click(function (e) {
         $navbar.toggleClass("toggle-left");
-    })
-
+    });
 });
 
 function toggle_onclick($win, $navbar, width) {
@@ -24,11 +23,11 @@ function toggle_onclick($win, $navbar, width) {
     }
 }
 
+// Typed.js animations
 var typed = new Typed('#typed', {
     strings: [
         'BCA Student',
         'Hard Working Person',
-       
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -39,23 +38,23 @@ var typed_2 = new Typed('#typed_2', {
     strings: [
         'BCA Student',
         'Hard Working Person',
-       
     ],
     typeSpeed: 50,
     backSpeed: 50,
     loop: true
 });
 
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
 
+// View counter function
 const counter = document.querySelector(".counter-number");
 
 async function updateCounter() {
@@ -71,4 +70,5 @@ async function updateCounter() {
   }
 }
 
-
+// Call the function once page is loaded
+updateCounter();
