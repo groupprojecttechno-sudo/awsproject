@@ -26,8 +26,8 @@ function toggle_onclick($win, $navbar, width) {
 
 var typed = new Typed('#typed', {
     strings: [
-        'Software Engineer',
-        'Cloud Architect',
+        'BCA Student',
+        'Hard Working Person',
         
     ],
     typeSpeed: 50,
@@ -37,8 +37,8 @@ var typed = new Typed('#typed', {
 
 var typed_2 = new Typed('#typed_2', {
     strings: [
-        'Software Engineer',
-        'Cloud Architect',
+        'BCA Student',
+        'Hard Working Person',
         
     ],
     typeSpeed: 50,
@@ -57,11 +57,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 const counter = document.querySelector(".counter-number");
+
 async function updateCounter() {
-    let response = await fetch(
-        "https://wwjcx7tyxrbjmbkf3vc3teo3mu0qrvhq.lambda-url.ca-central-1.on.aws/"
-    );
-    let data = await response.json();
-    counter.innerHTML = `👀 Views: ${data}`;
+  try {
+    const counter = document.querySelector("footer .counter-number"); // only find inside footer
+    const response = await fetch("https://86tbl0aab0.execute-api.us-east-1.amazonaws.com/prod/viewcount");
+    const data = await response.json();
+    counter.textContent = ` Views: ${data.views}`;
+  } catch (error) {
+    console.error("Error fetching view count:", error);
+    const counter = document.querySelector("footer .counter-number");
+    counter.textContent = "Views: N/A";
+  }
 }
+
 updateCounter();

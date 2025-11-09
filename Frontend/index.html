@@ -28,10 +28,10 @@
                         <a href="#home" class="nav-item nav-link text-white-50 font-os font-size-16 active">Home</a>
                         <a href="#about_me"
                             class="nav-item nav-link text-white-50 font-os font-size-16 active">About</a>
+                        <a href="#skills"
+                            class="nav-item nav-link text-white-50 font-os font-size-16 active">Skills</a>
                         <a href="#awards"
-                            class="nav-item nav-link text-white-50 font-os font-size-16 active">Achievements</a>
-                        <div class="counter-number nav-item nav-link text-white-50 font-os font-size-16 active">Couldn't
-                            read the counter</div>
+                            class="nav-item nav-link text-white-50 font-os font-size-16 active">Achievements</a>                        
                     </div>
                 </nav>
             </div>
@@ -48,7 +48,7 @@
                 <section class="site-banner bg-light" id="home">
                     <div class="banner-area">
                         <div class="author text-center">
-                            <div class="author-img"></div>
+                            <img src="./about.jpg.jpg" alt="Shirsha Ghosh" class="author-img">
                             <h1 class="text-black font-staat font-size-40 text-uppercase py-3">Shirsha Ghosh</h1>
                             <h5 class="text-black font-ram font-size-27">I'm a <span id="typed"></span></h5>
                         </div>
@@ -64,9 +64,11 @@
                     </div>
                     <div class="row m-0">
                         <div class="col-sm-5 pl-0">
-                            <img src="./assets/banner.png" alt="profile image" class="img-fluid">
+                           <img src="./profile.jpg.avif" alt="About Me Image" class="img-fluid about-img">
                         </div>
                         <div class="col-sm-6">
+
+                        
                             <h6 class="text-uppercase font-os font-size-16 text-muted">About Me</h6>
                             <h5 class="font-ram font-size-20 py-2">I'm Shirsha Ghosh & a <span id="typed_2"></span></h5>
                             <p class="font-ram text-black-50 py-2">
@@ -81,15 +83,15 @@
                                             class="text-black-50">shirshaghosh.com</span></p>
                                 </div>
                             </div>
-                            <button type="submit" onclick="window.open('/assets/shirshaghosh.pdf')"
-                                class="btn btn-dark text-uppercase mr-3">Download CV</button>
+                            <a href="./Shirsha%20Ghosh.pdf" download class="btn btn-dark text-uppercase mr-3">
+                            Download CV</a>
                         </div>
                     </div>
                 </section>
                 <!-- #about me area -->
 
                 <!-- ability -->
-                <section class="skill px-4 py-5 bg-light" id="services">
+                <section class="skill px-4 py-5 bg-light" id="skills">
                     <div class="ability py-3">
                         <h5 class="text-uppercase font-os font-size-16 text-muted">Ability</h5>
                         <h1 class="text-uppercase font-staat font-size-34">My skills</h1>
@@ -97,8 +99,8 @@
                     <div class="row">
                         <div class="col-sm-6 pl-4">
                             <p class="font-ram font-size-16 text-black-50 pb-3">
-                                I am fluent with HTML/CSS and JavaScript. Have build projects with
-                                	Python,C language,Java,Web Development,Soft Skills,Problem Solving,
+                                I am fluent with HTML/CSS and JavaScript. Also can d 
+                                	Python,C language,Java,Web Development and have Soft Skills,Problem Solving,
                                     Collaboration,Communication,Adaptability
 
                                 </br>
@@ -177,29 +179,38 @@
                 <!--footer-->
                 <footer id="footer" class="pt-5 px-3">
                     <div id="contact_us">
-                        <div class="row bg-light py-5">
-                            <div class="col-sm-4 my-5 text-center">
-                                <h6 class="font-ram font-size-16 text-black-50">&copy;2020 Shirsha. All rights reserved
-                                </h6>
+                        <div class="row bg-light py-5 align-items-center">
+      
+                            <!-- Left Section -->
+                            <div class="col-sm-4 text-center">
+                                <h6 class="font-ram font-size-16 text-black-50 mb-0">
+                                    &copy;2025 Shirsha. All rights reserved
+                                 </h6>
                             </div>
-                            <div class="col-sm-4 my-4 text-center">
-                                <div class="footer-title">
-                                    <p class="description font-os font-size-16 text-black-50 text-uppercase">Made with ❤
-                                    </p>
-                                </div>
-                                <div class="counter-number">Couldn't read the counter</div>
-                            </div>
-                            <div class="social-icons col-sm-4 my-4 text-center">
-                                <a href="https://www.linkedin.com/in/shirsha-ghosh-8b3084318/" target="blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://github.com/Shirsha06" target="blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+
+                <!-- Middle Section -->
+                <div class="col-sm-4 text-center">
+                    <p class="description font-os font-size-16 text-black-50 text-uppercase mb-1">
+                         Made with ❤
+                    </p>
+                    <span id="views" class="counter-number">Views: Loading...</span>
+                </div>
+
+                <!-- Right Section -->
+                <div class="col-sm-4 text-center">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shirsha-ghosh-8b3084318/" target="_blank" class="mx-2">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Shirsha06" target="_blank" class="mx-2">
+                            <i class="fab fa-github"></i>
+                        </a>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+</footer>
 
             </div>
         </div>
